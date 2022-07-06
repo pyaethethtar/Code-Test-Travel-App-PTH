@@ -1,9 +1,345 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_24"
+            android:padding="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRegisterTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_title"
+            android:textSize="@dimen/text_regular_3x"
+            android:fontFamily="@font/chivo_bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_medium_1"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRegisterDescription"
+        style="@style/text_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_medium_3"
+        android:text="@string/register_description"
+        android:background="@color/bg_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMandatory"
+        style="@style/text_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRegisterDescription"
+        android:paddingVertical="@dimen/margin_medium_1"
+        android:paddingStart="@dimen/margin_medium_3"
+        android:text="@string/tv_mandatory"
+        android:background="@color/bg_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRegisterDescription"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guitar"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvRegisterDescription" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium_3"
+        app:layout_constraintTop_toBottomOf="@id/tvMandatory"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_first_name"
+            style="@style/text_label"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_xlarge"
+            android:inputType="textPersonName"
+            android:background="@color/white"
+            style="@style/text_regular"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_gray"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_last_name"
+            style="@style/text_label"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etLastName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_xlarge"
+            android:inputType="textPersonName"
+            android:background="@color/white"
+            style="@style/text_regular"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_gray"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_email"
+            style="@style/text_label"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_xlarge"
+            android:inputType="textEmailAddress"
+            android:background="@color/white"
+            style="@style/text_regular"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_gray"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/margin_medium_1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_dob"
+                    style="@style/text_label"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etDob"
+                    style="@style/text_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:layout_below="@id/tvDob"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_dob" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnDob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/etDob"
+                    android:layout_alignBottom="@id/etDob"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/dob"
+                    android:layout_marginEnd="@dimen/margin_small"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/line_gray"
+                    android:layout_below="@id/etDob"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rounded_corner_gray">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/tv_female"
+                    style="@style/text_regular"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded_corner_border_gradient"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/tv_male"
+                    style="@style/text_regular"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNationality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_nationality"
+            style="@style/text_label"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etNationality"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_xlarge"
+            android:background="@color/white"
+            style="@style/text_regular"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_gray"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_country"
+            style="@style/text_label"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etCountry"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_xlarge"
+            android:background="@color/white"
+            style="@style/text_regular"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_gray"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_mobile"
+            style="@style/text_label"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/btnCode"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_xlarge"
+                android:text="+65"
+                android:inputType="numberDecimal"
+                style="@style/text_regular"
+                android:background="@color/white"
+                android:maxLength="3"
+                android:paddingEnd="@dimen/margin_medium_1"/>
+
+            <View
+                android:layout_width="@dimen/line_height"
+                android:layout_height="match_parent"
+                android:background="@color/line_gray"
+                android:layout_marginVertical="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_xlarge"
+                android:background="@color/white"
+                android:inputType="phone"
+                android:paddingStart="@dimen/margin_medium_1"
+                style="@style/text_regular"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_gray"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_medium"
+        android:background="@color/line_gray"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnCreateMyAcc"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnCreateMyAcc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/btn_create_my_acc"
+        style="@style/text_button"
+        android:background="@drawable/bg_rounded_corner_gradient"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

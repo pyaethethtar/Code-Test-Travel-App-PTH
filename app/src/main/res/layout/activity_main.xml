@@ -1,19 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
 
-    <TextView
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/welcome"
+        android:scaleType="fitXY"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/ic_baseline_close_24"
+        android:padding="@dimen/margin_medium_1"
+        android:layout_marginTop="@dimen/margin_medium_3"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/clouds"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_xlarge"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_xlarge">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWelcomeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_title"
+            android:textSize="@dimen/text_heading_2x"
+            android:textColor="@color/black"
+            android:fontFamily="@font/chivo_bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWelcomeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_description"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/black"
+            android:fontFamily="@font/chivo_regular"
+            android:layout_marginTop="@dimen/margin_medium_3"/>
+
+        <RelativeLayout
+            android:id="@+id/btnLoginFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:background="@drawable/bg_rounded_corner_blue">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLoginFacebook"
+                style="@style/text_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/btn_login_facebook" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLoginFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facebook_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_medium_1"/>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/btn_login_email"
+            style="@style/text_button"
+            android:background="@drawable/bg_rounded_corner_blue"
+            android:layout_marginTop="@dimen/margin_medium_1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnCreateNewAcc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/btn_create_new_acc"
+            style="@style/text_button"
+            android:background="@drawable/bg_rounded_corner_gradient"
+            android:layout_marginTop="@dimen/margin_medium_1"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

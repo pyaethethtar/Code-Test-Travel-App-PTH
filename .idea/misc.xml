@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/Travel App/app/src/main/res/layout/activity_main.xml" value="0.11041666666666666" />
+        <entry key="..\:/Projects/Travel App/app/src/main/res/drawable/bg_rounded_corner_blue.xml" value="0.1" />
+        <entry key="..\:/Projects/Travel App/app/src/main/res/drawable/bg_rounded_corner_border_gradient.xml" value="0.1" />
+        <entry key="..\:/Projects/Travel App/app/src/main/res/drawable/bg_rounded_corner_gradient.xml" value="0.1" />
+        <entry key="..\:/Projects/Travel App/app/src/main/res/drawable/bg_rounded_corner_gray.xml" value="0.1" />
+        <entry key="..\:/Projects/Travel App/app/src/main/res/drawable/shape.xml" value="0.1" />
+        <entry key="..\:/Projects/Travel App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Projects/Travel App/app/src/main/res/layout/activity_register.xml" value="0.264" />
       </map>
     </option>
   </component>

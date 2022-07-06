@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">TravelApp</string>
+    <string name="welcome_title">Welcome to \nReady To Travel</string>
+    <string name="welcome_description">Sign up with Facebook for the most \nfulfilling trip planning experience with us!</string>
+    <string name="btn_login_facebook">Log in with Facebook</string>
+    <string name="btn_login_email">Log in with email address</string>
+    <string name="btn_create_new_acc">Create a new account</string>
+    <string name="register_title">Almost there!</string>
+    <string name="register_description">Complete the form below to create \nyour Ready To Travel account</string>
+    <string name="tv_mandatory">*Mandatory</string>
+    <string name="lbl_first_name">First Name *</string>
+    <string name="lbl_last_name">Last Name *</string>
+    <string name="lbl_email">Email Address *</string>
+    <string name="lbl_dob">Date of Birth *</string>
+    <string name="hint_dob">DD/MM/YYYY</string>
+    <string name="tv_female">Female</string>
+    <string name="tv_male">Male</string>
+    <string name="lbl_nationality">Nationality *</string>
+    <string name="lbl_country">Country of Residence *</string>
+    <string name="lbl_mobile">Mobile no. (Optional)</string>
+    <string name="btn_create_my_acc">Create my account now</string>
 </resources>
